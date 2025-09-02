@@ -1,12 +1,12 @@
 # ArepDockerApplication
 
-Spring Boot Docker Application - AREP Project
+Aplicación Spring Boot con Docker - Proyecto AREP
 
-## Description
+## Descripción
 
-This is a Spring Boot application containerized with Docker. The project demonstrates the implementation of a web application using Spring Boot framework and Docker containerization.
+Esta es una aplicación Spring Boot containerizada con Docker. El proyecto demuestra la implementación de una aplicación web utilizando el framework Spring Boot y containerización con Docker.
 
-## Technologies Used
+## Tecnologías Utilizadas
 
 - Java 17
 - Spring Boot 3.5.5
@@ -14,7 +14,7 @@ This is a Spring Boot application containerized with Docker. The project demonst
 - Docker
 - Docker Compose
 
-## Project Structure
+## Estructura del Proyecto
 
 ```
 ├── src/
@@ -31,101 +31,87 @@ This is a Spring Boot application containerized with Docker. The project demonst
 └── README.md
 ```
 
-## Requirements
+## Requisitos
 
-- Java 17 or higher
+- Java 17 o superior
 - Maven 3.6+
 - Docker
-- Docker Compose (optional)
+- Docker Compose (opcional)
 
-## How to Run
+## Cómo Ejecutar
 
-### Using Maven
+### Usando Maven
 
 ```bash
-# Build the project
+# Construir el proyecto
 mvn clean package
 
-# Run the application
+# Ejecutar la aplicación
 java -jar target/docker-0.0.1-SNAPSHOT.jar
 ```
 
-### Using Docker
+### Usando Docker
 
 ```bash
-# Build the Docker image
+# Construir la imagen Docker
 docker build -t arep-docker-app .
 
-# Run the container
+# Ejecutar el contenedor
 docker run -p 6000:6000 arep-docker-app
 ```
 
-### Using Docker Compose
+### Usando Docker Compose
 
 ```bash
-# Start the application
+# Iniciar la aplicación
 docker-compose up
 
-# Start in detached mode
+# Iniciar en modo detached
 docker-compose up -d
 
-# Stop the application
+# Detener la aplicación
 docker-compose down
 ```
 
-## Configuration
+## Configuración
 
-- **Port:** 6000 (configurable via PORT environment variable)
-- **Profile:** Default Spring Boot profiles
+- **Puerto:** 6000 (configurable mediante la variable de entorno PORT)
+- **Perfil:** Perfiles por defecto de Spring Boot
 
-## API Endpoints
+## Endpoints de la API
 
-The application runs on `http://localhost:6000`
+La aplicación se ejecuta en `http://localhost:6000`
 
-## Development
+## Desarrollo
 
-### Building the project
+### Construir el proyecto
 
 ```bash
 mvn clean compile
 ```
 
-### Running tests
+### Ejecutar pruebas
 
 ```bash
 mvn test
 ```
 
-### Building JAR
+### Construir JAR
 
 ```bash
 mvn clean package
 ```
 
-## Docker Configuration
+## Configuración de Docker
 
-The application uses a multi-stage Docker build process:
+La aplicación utiliza un proceso de construcción Docker multi-etapa:
 
-- **Base Image:** `openjdk:17-jdk-slim`
-- **Working Directory:** `/usrapp/bin`
-- **Port:** 6000
-- **Entry Point:** Java application with classpath configuration
+- **Imagen Base:** `openjdk:17-jdk-slim`
+- **Directorio de Trabajo:** `/usrapp/bin`
+- **Puerto:** 6000
+- **Punto de Entrada:** Aplicación Java con configuración de classpath
 
-## Contributing
+## Licencia
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-feature`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/new-feature`)
-5. Create a Pull Request
+Este proyecto es parte del curso AREP (Arquitecturas Empresariales).
 
-## License
-
-This project is part of the AREP (Arquitecturas Empresariales) coursework.
-
-## Author
-
-- **Name:** [Your Name]
-- **Email:** [Your Email]
-- **University:** [Your University]
-- **Course:** AREP - Arquitecturas Empresariales
